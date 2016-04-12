@@ -1,0 +1,38 @@
+{
+  "name": "rollodeqc-locator",
+  "version": "0.0.0",
+  "description": "Parse locations to extract city, etc.",
+  "license": "AGPL-3.0",
+  "repository": "millette/rollodeqc-locator",
+  "author": {
+    "name": "Robin Millette",
+    "email": "robin@millette.info",
+    "url": "http://robin.millette.info"
+  },
+  "engines": {
+    "node": ">=4.3.1"
+  },
+  "scripts": {
+    "test": "standard && nyc ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "lodash.deburr": "^4.0.0",
+    "lodash.uniqby": "^4.3.0",
+    "node-postal": "github:openvenues/node-postal"
+  },
+  "devDependencies": {
+    "ava": "^0.12.0",
+    "babel-eslint": "^6.0.0",
+    "nyc": "^6.1.1",
+    "standard": "^6.0.8"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
