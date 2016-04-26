@@ -4,9 +4,26 @@ node_js:
   - '4'
 env:
   - CXX=g++-4.9
+  - CC="gcc-4.9"
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.9
+      - gcc-4.9
+      - libsnappy-dev
+      - realpath
+install:
+  - mkdir deps
+  - git clone https://github.com/openvenues/libpostal
+  - cd libpostal
+  - ./bootstrap.sh
+  - ./configure --datadir=$(pwd)/data --prefix=$(realpath $(pwd)/../deps) --bindir=$(realpath $(pwd)/../deps)
+  - make install
+  - cd ..
+  - export CXXFLAGS=-I$(pwd)/deps/include
+  - export LDFLAGS=-L$(pwd)/deps/lib
+script:
+  - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/deps/lib
+after_success: npm run coverage

@@ -1,4 +1,4 @@
-# rollodeqc-qc-locator [![Dependency Status](https://gemnasium.com/badges/github.com/millette/rollodeqc-qc-locator.svg)](https://gemnasium.com/github.com/millette/rollodeqc-qc-locator)
+# rollodeqc-qc-locator [![Build Status](https://travis-ci.org/millette/rollodeqc-qc-locator.svg?branch=master)](https://travis-ci.org/millette/rollodeqc-qc-locator) [![Coverage Status](https://coveralls.io/repos/github/millette/rollodeqc-qc-locator/badge.svg?branch=master)](https://coveralls.io/github/millette/rollodeqc-qc-locator?branch=master) [![Dependency Status](https://gemnasium.com/badges/github.com/millette/rollodeqc-qc-locator.svg)](https://gemnasium.com/github.com/millette/rollodeqc-qc-locator)
 > Parse locations to extract city, etc.
 
 Currently, this module is more like a proof on concept than anything useful.
