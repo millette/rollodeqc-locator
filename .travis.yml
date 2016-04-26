@@ -2,19 +2,16 @@ language: node_js
 node_js:
   - '5'
   - '4'
-env:
-  - CXX=g++-4.9
-  - CC="gcc-4.9"
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - g++-4.9
       - gcc-4.9
       - libsnappy-dev
       - realpath
 install:
+  - export CC="gcc-4.9"
   - mkdir deps
   - git clone https://github.com/openvenues/libpostal
   - cd libpostal
@@ -26,4 +23,5 @@ install:
   - export LDFLAGS=-L$(pwd)/deps/lib
 script:
   - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/deps/lib
+  - npm test
 after_success: npm run coverage
