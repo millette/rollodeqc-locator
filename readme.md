@@ -1,4 +1,4 @@
-# rollodeqc-locator
+# rollodeqc-qc-locator [![Dependency Status](https://gemnasium.com/badges/github.com/millette/rollodeqc-qc-locator.svg)](https://gemnasium.com/github.com/millette/rollodeqc-qc-locator)
 > Parse locations to extract city, etc.
 
 Currently, this module is more like a proof on concept than anything useful.
@@ -9,12 +9,12 @@ Next thing to figure out is how to test on travis-ci, knowning we must compile/p
 
 ## Install
 ```
-$ npm install --save rollodeqc-locator
+$ npm install --save rollodeqc-qc-locator
 ```
 
 ## Usage
 ```js
-const rollodeqcLocator = require('rollodeqc-locator');
+const rollodeqcLocator = require('rollodeqc-qc-locator');
 
 rollodeqcLocator('unicorns');
 //=> 'unicorns & rainbows'
